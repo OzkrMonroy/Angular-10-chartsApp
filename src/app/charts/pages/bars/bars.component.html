@@ -1,1 +1,17 @@
-<p>bars works!</p>
+<h1>Bar chart</h1>
+<hr>
+<div class="row">
+  <div class="col">
+    <div style="display: block">
+      <canvas baseChart
+        [data]="barChartData"
+        [options]="barChartOptions"
+        [type]="barChartType"
+      >
+      </canvas>
+    </div>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-primary" (click)="randomize()">Update</button>
+    </div>
+  </div>
+</div>
