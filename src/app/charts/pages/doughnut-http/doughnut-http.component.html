@@ -1,1 +1,19 @@
-<p>doughnut-http works!</p>
+<h1>Most used social media</h1>
+<hr />
+<div
+  class="alert alert-info"
+  *ngIf="doughnutChartData.datasets.length === 0; else chartContainer"
+>
+  Loading...
+</div>
+<div class="row">
+  <div class="col">
+    <ng-template #chartContainer>
+      <div style="display: block">
+        <canvas baseChart [data]="doughnutChartData" [type]="doughnutChartType">
+        </canvas>
+      </div>
+      <span class="text-primary float-end">Information in trillions of users</span>
+    </ng-template>
+  </div>
+</div>
